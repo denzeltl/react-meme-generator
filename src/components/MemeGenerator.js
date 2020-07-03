@@ -10,9 +10,9 @@ function MemeGenerator({ memeArray }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const randNum = Math.floor(Math.random() * (memeArray.length + 1));
-        setRandomImage(memeArray[randNum].url);
-        console.log(memeArray[randNum]);
+        const randNum = Math.floor(Math.random() * memeArray.length);
+        const randMeme = memeArray[randNum].url;
+        setRandomImage(randMeme ? randMeme : 'http://i.imgflip.com/1bij.jpg');
     };
 
     const handleChange = (e) => {

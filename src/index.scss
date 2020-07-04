@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background: #baced0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#root {
+    background: #fff;
+    width: 80%;
+    margin: 50px auto 50px;
+    box-shadow: 0 0 10px 2px rgba($color: #000000, $alpha: 0.3);
+}
+
+.App {
+    text-align: center;
+    padding: 30px 60px;
+
+    header {
+        margin-bottom: 20px;
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    .meme-generator {
+        form {
+            margin-bottom: 25px;
+            input {
+                font-size: 1.3rem;
+                padding: 0 0.5rem;
+                line-height: 1.6;
+                margin-right: 0.6rem;
+            }
+            button {
+                font-size: 1.3rem;
+                font-weight: bold;
+                border: 2px solid #038087;
+                outline: none;
+                background: #038087;
+                cursor: pointer;
+                line-height: 1.6;
+                color: #fff;
+                padding: 0 0.8rem;
+                transition: all 0.2s;
+                &:hover {
+                    background: #fff;
+                    color: #038087;
+                }
+            }
+        }
+
+        .meme-output {
+            position: relative;
+            img {
+                max-width: 100%;
+            }
+            h2 {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                position: absolute;
+                text-transform: uppercase;
+                font-size: 2rem;
+                text-shadow: 0 0 10px rgb(0, 0, 0);
+                letter-spacing: 0.1rem;
+                color: #fff;
+                &.top {
+                    top: 1.5rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                &.bottom {
+                    bottom: 1.5rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    #root {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    html {
+        font-size: 15px;
+    }
+
+    .App {
+        .meme-generator {
+            form {
+                width: 25rem;
+                margin: 0 auto 20px;
+                input {
+                    width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 0.5rem;
+                }
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    html {
+        font-size: 14px;
+    }
+
+    .App {
+        .meme-generator {
+            form {
+                width: 100%;
+            }
+
+            .meme-output {
+                h2 {
+                    font-size: 1.6rem;
+                    &.top {
+                        top: 1.2rem;
+                    }
+                    &.bottom {
+                        bottom: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -23,7 +23,7 @@ function MemeGenerator({ memeArray }) {
     };
 
     return (
-        <div>
+        <div className="meme-generator">
             <form onSubmit={handleSubmit}>
                 <input type="text" value={inputTexts.topText} onChange={handleChange} name="topText" placeholder="Top Text" />
                 <input type="text" value={inputTexts.bottomText} onChange={handleChange} name="bottomText" placeholder="Bottom Text" />
